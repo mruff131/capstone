@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Baumans:regular);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* home css */
+.bg-zoom-out {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.custom-text {
+    color: #FFF;
+    font-family: "Gothic A1";
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+.button-customs {
+    font-size: 24px;
+}
+
+/* navbar.css */
+.navbar {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure the navbar is above other content */
+  background-color: transparent;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.bubble-logo {
+    text-align: center;
+    font-family: Baumans;
+    font-size: 105px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: var(--Linear, linear-gradient(90deg, #F00 0%, #FFD600 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+
+
+/* Creating a circular border with gradient  */
+
+.circle {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  left: 5px;
+  top: 5px;
+  object-fit: cover;
+}
+
+.border-customs{
+  border: 5px solid;
+  background: var(--Linear, linear-gradient(90deg, #F00 0%, #FFD600 100%));
+  border-radius: 50%;
+  width: 520px;
+  height: 520px;
+  position: relative;
+  margin-bottom: 20px;
+
+}
+
+.img-customs {
+  border: 5px solid #FFD600; 
+  background: linear-gradient(90deg, #F00 0%, #FFD600 100%);
+  border-radius: 50%;
+  width: 520px;
+  height: 520px;
+  position: relative;
+}
+
+
+
+/* Image hover css */
+
+.model-container {
+  position: relative;
+  display: inline-block;
+}
+
+.model-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.5s;
+}
+
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.model-container:hover .model-image {
+  filter: brightness(0.5); /* Dim the background on hover */
+}
+
+.model-container:hover .button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
